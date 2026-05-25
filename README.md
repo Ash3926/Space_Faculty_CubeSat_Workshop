@@ -9,7 +9,7 @@
 - Camera module is VC0703 Adafruit
 
 **Folders**
-- **OBC/ADCS/Ground Station Component Files:** Files to be uploaded to the OBC/ADCS/Ground Station respectively for various purposes
+- **OBC/ADCS/Ground Station Component Files:** Files to be uploaded to the OBC/ADCS/Ground Station respectively for various purposes. Will be collated into a finalized file for each board in a future commit.
 - **Camera Files:** Files for activating the camera module of the CubeSat. Further instruction available in Camera_practice subfolder
 
 **How to use**
