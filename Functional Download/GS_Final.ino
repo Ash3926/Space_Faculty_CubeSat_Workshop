@@ -5,9 +5,9 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
 
-  Serial.println("LoRa Receiver");
-
-  if (!LoRa.begin(434E6)) {
+  // Initialize LoRa module at 434 MHz
+  if (!LoRa.begin(434E6)) 
+  {
     Serial.println("Starting LoRa failed!");
     while (1);
   }
@@ -16,9 +16,12 @@ void setup() {
 void loop() {
   String input = "";
 
-  input = Serial.read();
+  input = Serial.readStringUntil('\n'); // Read input from Serial until newline character
+  input.trim(); // Remove any leading/trailing whitespace
+
+  // Send command, if any, to LoRa module
   LoRa.beginPacket();
-  Lora.print(input); // Does not need to print newline as Serial.read() includes the newline
+  LoRa.print(input);
   LoRa.endPacket();
 
   // try to parse packet if received
@@ -27,7 +30,7 @@ void loop() {
     // received a packet
     Serial.print("Received packet '");
 
-    // read packet
+    // read packet and send to serial (laptop connection)
     while (LoRa.available()) {
       Serial.print((char)LoRa.read());
     }

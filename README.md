@@ -1,11 +1,11 @@
 ## Satellite Workshop by Space Faculty [18-22 May 2026]
 
- **Purpose:** Learning about satellites and basic subsystems in them.
+ **Purpose:** Learning about satellites and basic subsystems in them. [Reference Materials](https://github.com/sbwspacefaculty-png/SatBuildWorkshop)
 
 **Hardware/Software:** 
-- OBC codes built for Arduino Nano, using a teaching set of a 1U CubeSat
+- OBC and Ground Station codes built for Arduino Nano, using a teaching set of a 1U CubeSat
 - ADCS codes built for Arduino Nano Every
-- Uses the old bootloader CH341SER.exe as included in this folder.
+- Uses the old bootloader `CH341SER.exe` as included in this folder.
 - Camera module is VC0703 Adafruit
 
 **Folders**
@@ -13,5 +13,7 @@
 - **Camera Files:** Files for activating the camera module of the CubeSat. Further instruction available in Camera_practice subfolder
 
 **How to use**
-- Open the desired `.ino` file in the Arduino IDE (or VS Code with the Arduino extension), select the correct board/port, then upload.
-- For LoRa sketches, ensure both sender and receiver use matching LoRa frequency.
+- Component files folder has a separate README with instructions.
+- Functional Download files can be uploaded directly to their labelled board to run, only the Ground Station needs to remain connected to a laptop with Serial Monitor. Available functions will be displayed on startup and after each command. `*.ino` files need to be in a similarly named folder to open in Arduino IDE and upload.
+
+_**To note:** Debugging prints have been removed from OBC and ADCS final code, as in practice these boards would not have a serial output once launched. Debug print statements can be found in component files._

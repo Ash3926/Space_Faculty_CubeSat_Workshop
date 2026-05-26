@@ -5,6 +5,9 @@ void setup() {
   Serial.begin(9600);
   obc.begin(9600);
 
+  pinMode(3, INPUT); // RX pin for OBC to ADCS communication
+  pinMode(4, OUTPUT); // TX pin for OBC to ADCS communication
+  while (!Serial); // Wait for serial monitor to open
 }
 
 void loop() {
