@@ -104,7 +104,7 @@ void CommandHandler(String command) {
         vbat_send();
     }
     else if (command == "PHOTO") {
-        // PHOTO();
+        PHOTO();
     }
     else if (command == "POS_State") {
         LoRa.beginPacket();
